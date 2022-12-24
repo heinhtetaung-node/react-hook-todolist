@@ -38,6 +38,31 @@ function Home() {
           });
         }
     }
+    
+    View
+    return (
+        <div className="w-full h-64 p-4" data-testid={id}>
+          {addons
+            .sort((a, b) => a.id - b.id)
+            .map((addon, index) => {
+              return (
+                <div className="w-full flex justify-between" key={addon.id}>
+                  <div>
+                    <input
+                      checked={addon.checked}
+                      type="checkbox"
+                      onClick={() => checkAddon(index, !addon.checked)}
+                    />
+                    <label onClick={() => checkAddon(index, !addon.checked)}>
+                      {addon.name} {addon.checked ? 'check' : 'no'}
+                    </label>
+                  </div>
+                  <label>{addon.originalPrice}</label>
+                </div>
+              );
+            })}
+        </div>
+      );
     */
     
     const addItem = (e) => {
