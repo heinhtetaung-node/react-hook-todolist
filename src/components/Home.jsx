@@ -12,6 +12,34 @@ function Home() {
         alert('page start')
     }, [])
 
+    /** 
+     * Actually this is the best CRUD with react state
+     **/
+    /*
+    const checkAddon = (index: number, checked: boolean) => {
+        const checkAddOn = addons[index];
+        // updating checked add on items to addons array
+        setAddons((existingAddons) => {
+          checkAddOn.checked = checked;
+          return [
+            checkAddOn,
+            ...existingAddons.filter((addon) => addon.id !== checkAddOn.id),
+          ];
+        });
+        if (checked) {
+          // adding checked addon to order array
+          setOrders([...orders, checkAddOn]);
+        } else {
+          // removing checked add on items from order array
+          setOrders((existingOrders) => {
+            return [
+              ...existingOrders.filter((order) => order.id !== checkAddOn.id),
+            ];
+          });
+        }
+    }
+    */
+    
     const addItem = (e) => {
         e.preventDefault()
         /*
