@@ -40,6 +40,20 @@ function Home() {
                 prevData[updkey] = todo
                 return prevData
             });
+            
+            // https://www.codingdeft.com/posts/react-usestate-array/ can use this also know later
+            /*
+            setAddons((existingItems) => {
+              return [
+                ...existingItems.slice(0, index),
+                {
+                  ...existingItems[index],
+                  checked,
+                },
+                ...existingItems.slice(index + 1),
+              ];
+            });
+            */
         } else {
             setDatas(prevData => ([...prevData, todo])); // best way for adding item to single array
             /* maybe you can do fully like
