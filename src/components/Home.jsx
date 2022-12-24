@@ -91,6 +91,13 @@ function Home() {
         const datasDup = datas
         datasDup.splice(key, 1)
         setDatas(() => ([...datasDup]));      
+        /*  this way even better      
+        setOrders((existingOrders) => {
+            return [
+              ...existingOrders.filter((order) => order.id !== addons[index].id),
+            ];
+          });
+          */
     }
 
     return (
